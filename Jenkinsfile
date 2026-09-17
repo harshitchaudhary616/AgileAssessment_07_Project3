@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -13,13 +12,13 @@ pipeline {
             parallel {
                 stage('Frontend Check') {
                     steps {
-                        sh 'python frontend_check.py'
+                        sh 'python3 frontend_check.py'
                     }
                 }
 
                 stage('Backend Check') {
                     steps {
-                        sh 'python backend_check.py'
+                        sh 'python3 backend_check.py'
                     }
                 }
             }
